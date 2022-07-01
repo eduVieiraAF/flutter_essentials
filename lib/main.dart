@@ -17,6 +17,11 @@ class MyApp extends StatelessWidget {
         ),
         body: 
         const Text("The body of the app"),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.home_rounded), label: "Home"),
+            BottomNavigationBarItem(icon: Icon(Icons.work_rounded), label: "Work"),
+          ]),
       ),
     );
   }
