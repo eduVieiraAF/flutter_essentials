@@ -15,13 +15,13 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Flutter essentials → App Title "),
         ),
-        body: 
-        const Text("The body of the app"),
-        bottomNavigationBar: BottomNavigationBar(
-          items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home_rounded), label: "Home"),
-            BottomNavigationBarItem(icon: Icon(Icons.work_rounded), label: "Work"),
-          ]),
+        body: const Text("The body of the app"),
+        bottomNavigationBar: BottomNavigationBar(items: const [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home_rounded), label: "Home"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.settings), label: "Settings"),
+        ]),
       ),
     );
   }
