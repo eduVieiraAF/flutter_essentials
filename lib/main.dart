@@ -13,8 +13,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Essentials of Flutter → App Title "),
+          title: const Text("Flutter essentials → App Title "),
         ),
+        body: 
+        const Text("The body of the app"),
       ),
     );
   }
