@@ -15,7 +15,17 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Flutter essentials → App Title "),
         ),
-        body: const Text("The body of the app"),
+        body: const Center(
+          child: Text(
+            "The body of the app",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+              backgroundColor: Colors.blue,
+            ),
+          ),
+        ),
         bottomNavigationBar: BottomNavigationBar(items: const [
           BottomNavigationBarItem(
               icon: Icon(
