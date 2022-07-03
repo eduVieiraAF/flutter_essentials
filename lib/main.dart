@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  MyApp({Key? key}) : super(key: key);
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
 
-  String count = "Click";
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  String buttonName = "Click";
+  String titleName = "The body of the app";
 
   @override
   Widget build(BuildContext context) {
@@ -18,10 +24,10 @@ class MyApp extends StatelessWidget {
           title: const Text("Flutter essentials → App Title "),
         ),
         body: Column(children: [
-          const Center(
+          Center(
             child: Text(
-              "The body of the app",
-              style: TextStyle(
+              titleName,
+              style: const TextStyle(
                 color: Colors.blue,
                 fontSize: 25,
                 fontWeight: FontWeight.bold,
@@ -30,8 +36,13 @@ class MyApp extends StatelessWidget {
           ),
           Center(
             child: ElevatedButton(
-              onPressed: () {},
-              child: const Text("Click"),
+              onPressed: () {
+                setState(() {
+                  titleName = "You've clicked";
+                  buttonName = "Clicked";
+                });
+              },
+              child: Text(buttonName),
             ),
           )
         ]),
