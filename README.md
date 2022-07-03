@@ -2,5 +2,5 @@
 
 # Flutter Essentials
 
-## Fiddling with Flutter;
-## Several tutorials compilation.
+## Fiddling with Flutter
+## Several tutorials compilation
