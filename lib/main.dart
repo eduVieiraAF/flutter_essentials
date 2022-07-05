@@ -23,41 +23,42 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text("Flutter essentials → App Title "),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-          Center(
-            child: Text(
-              titleName,
-              style: const TextStyle(
-                color: Colors.blue,
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
+        body: SizedBox(
+          width: 400,
+          height: 450,
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            Center(
+              child: Text(
+                titleName,
+                style: const TextStyle(
+                  color: Colors.blue,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
-          ),
-          Center(
-            child: ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  titleName = "You've clicked";
-                });
-              },
-              child: const Text("Click"),
+            Center(
+              child: ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    titleName = "You've clicked";
+                  });
+                },
+                child: const Text("Click"),
+              ),
             ),
-          ),
-          Center(
-            child: ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  titleName = "The body of the app";
-
-                });
-              },
-              child: const Text("Undo"),
-            ),
-          )
-        ]),
+            Center(
+              child: ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    titleName = "The body of the app";
+                  });
+                },
+                child: const Text("Undo"),
+              ),
+            )
+          ]),
+        ),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
             BottomNavigationBarItem(
