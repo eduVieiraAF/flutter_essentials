@@ -24,9 +24,12 @@ class _MyAppState extends State<MyApp> {
           title: const Text("Flutter essentials → App Title "),
         ),
         body: SizedBox(
-          width: 400,
-          height: 450,
-          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          width: double.infinity,
+          //height: 450,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
             Center(
               child: Text(
                 titleName,
