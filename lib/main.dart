@@ -24,47 +24,48 @@ class _MyAppState extends State<MyApp> {
           title: const Text("Flutter essentials → App Title "),
         ),
         body: Center(
-          child: currentIndex == 0 ? SizedBox(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-              Center(
-                child: Text(
-                  titleName,
-                  style: const TextStyle(
-                    color: Colors.blue,
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-              Center(
-                child: ElevatedButton(
-                  onPressed: () {
-                    setState(() {
-                      titleName = "You've clicked";
-                    });
-                  },
-                  child: const Text("Click"),
-                ),
-              ),
-              Center(
-                child: OutlinedButton(
-                  style: ElevatedButton.styleFrom(
-                    onPrimary: Colors.blueGrey,
-                    primary: Colors.green.shade50
-                  ),
-                  onPressed: () {
-                    setState(() {
-                      titleName = "The body of the app";
-                    });
-                  },
-                  child: const Text("Undo"),
-                ),
-              )
-            ]),
-          ) : const SizedBox(),
+          child: currentIndex == 0
+              ? SizedBox(
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Center(
+                          child: Text(
+                            titleName,
+                            style: const TextStyle(
+                              color: Colors.blue,
+                              fontSize: 25,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        Center(
+                          child: ElevatedButton(
+                            onPressed: () {
+                              setState(() {
+                                titleName = "You've clicked";
+                              });
+                            },
+                            child: const Text("Click"),
+                          ),
+                        ),
+                        Center(
+                          child: OutlinedButton(
+                            style: ElevatedButton.styleFrom(
+                                onPrimary: Colors.blueGrey,
+                                primary: Colors.green.shade50),
+                            onPressed: () {
+                              setState(() {
+                                titleName = "The body of the app";
+                              });
+                            },
+                            child: const Text("Undo"),
+                          ),
+                        )
+                      ]),
+                )
+              : Image.network('https://uploads-ssl.webflow.com/5f841209f4e71b2d70034471/6078b650748b8558d46ffb7f_Flutter%20app%20development.png'),
         ),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
