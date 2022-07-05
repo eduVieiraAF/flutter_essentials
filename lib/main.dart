@@ -23,45 +23,49 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text("Flutter essentials → App Title "),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-          Center(
-            child: Text(
-              titleName,
-              style: const TextStyle(
-                color: Colors.blue,
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
+        body: Center(
+          child: currentIndex == 0 ? SizedBox(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+              Center(
+                child: Text(
+                  titleName,
+                  style: const TextStyle(
+                    color: Colors.blue,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
-            ),
-          ),
-          Center(
-            child: ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  titleName = "You've clicked";
-                });
-              },
-              child: const Text("Click"),
-            ),
-          ),
-          Center(
-            child: OutlinedButton(
-              style: ElevatedButton.styleFrom(
-                onPrimary: Colors.blueGrey,
-                primary: Colors.green.shade50
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      titleName = "You've clicked";
+                    });
+                  },
+                  child: const Text("Click"),
+                ),
               ),
-              onPressed: () {
-                setState(() {
-                  titleName = "The body of the app";
-                });
-              },
-              child: const Text("Undo"),
-            ),
-          )
-        ]),
+              Center(
+                child: OutlinedButton(
+                  style: ElevatedButton.styleFrom(
+                    onPrimary: Colors.blueGrey,
+                    primary: Colors.green.shade50
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      titleName = "The body of the app";
+                    });
+                  },
+                  child: const Text("Undo"),
+                ),
+              )
+            ]),
+          ) : const SizedBox(),
+        ),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
             BottomNavigationBarItem(
