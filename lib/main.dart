@@ -12,7 +12,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String buttonName = "Click";
   String titleName = "The body of the app";
   int currentIndex = 0;
 
@@ -24,7 +23,9 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text("Flutter essentials → App Title "),
         ),
-        body: Column(children: [
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
           Center(
             child: Text(
               titleName,
@@ -40,10 +41,20 @@ class _MyAppState extends State<MyApp> {
               onPressed: () {
                 setState(() {
                   titleName = "You've clicked";
-                  buttonName = "Clicked";
                 });
               },
-              child: Text(buttonName),
+              child: const Text("Click"),
+            ),
+          ),
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  titleName = "The body of the app";
+
+                });
+              },
+              child: const Text("Undo"),
             ),
           )
         ]),
