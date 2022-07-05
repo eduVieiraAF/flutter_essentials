@@ -49,6 +49,10 @@ class _MyAppState extends State<MyApp> {
           ),
           Center(
             child: OutlinedButton(
+              style: ElevatedButton.styleFrom(
+                onPrimary: Colors.blueGrey,
+                primary: Colors.green.shade50
+              ),
               onPressed: () {
                 setState(() {
                   titleName = "The body of the app";
